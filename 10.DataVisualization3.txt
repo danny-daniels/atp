@@ -1,0 +1,69 @@
+Title: Data Visualization III
+Download the Iris flower dataset or any other dataset into a DataFrame. (e.g.,
+https://archive.ics.uci.edu/ml/datasets/Iris ). Scan the dataset and give the inference as:
+1. List down the features and their types (e.g., numeric, nominal) available in the
+dataset. 2. Create a histogram for each feature in the dataset to illustrate the feature
+distributions. 3. Create a box plot for each feature in the dataset.
+4. Compare distributions and identify outliers.
+
+Objective of the Assignment: Students should be able to perform the data Visualization
+operation using Python on any open source dataset .
+
+
+
+
+
+
+
+
+#Import required libraries:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+#Create the data frame for downloaded iris.csv dataset:
+df=pd.read_csv('iris.csv')
+
+df.head()
+
+df.tail()
+
+df.isnull().sum()
+
+#List down the features and their types (e.g., numeric, nominal) available in the dataset:
+
+print("\n\nThe features in the dataset are as follows : ")
+print("1. Sepal length : ", df['sepal_length'].dtype)
+print("2. Sepal width : ", df['sepal_width'].dtype)
+print("3. Petal length : ", df['petal_length'].dtype)
+print("4. Petal width : ", df['petal_width'].dtype)
+print("5. Species : ", df['species'].dtype)
+
+#Create a boxplot for each feature in the dataset:
+
+sns.boxplot(df['sepal_length'])
+
+sns.boxplot(df['sepal_width'])
+
+sns.boxplot(df['petal_length'])
+
+sns.boxplot(df['petal_width'])
+
+#Compare distributions and identify outliers:
+sns.boxplot(df['sepal_length'], df['species'])
+
+sns.boxplot(df['petal_length'], df['species'])
+
+
+Theory:
+Boxplot:A box plot (or box-and-whisker plot) shows the distribution of quantitative data in a way that
+facilitates comparisons between variables or across levels of a categorical variable. The box shows the
+quartiles of the dataset while the whiskers extend to show the rest of the distribution, except for points
+that are determined to be “outliers” using a method that is a function of the inter-quartile range.
+
+Histograms:
+A histogram is basically used to represent data provided in a form of some groups.It is accurate method
+for the graphical representation of numerical data distribution. It is a type of bar plot where X-axis
+represents the bin ranges while Y-axis gives information about frequency.
