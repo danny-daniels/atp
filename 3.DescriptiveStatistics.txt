@@ -52,3 +52,71 @@ print("Max of Iris dataset \n",df.groupby('target').max(),"\n")
 #Minimum
 
 print("Min of Iris dataset \n",df.groupby('target').min(),"\n")
+
+
+
+
+
+
+
+Theory:
+What is Statistics?
+ Statistics is a branch of mathematics that deals with collecting, analyzing, interpreting, and
+visualizing empirical data.
+ Descriptive statistics and inferential statistics are the two major areas of statistics.
+ Descriptive statistics are for describing the properties of sample and population data (what
+has happened).
+ Inferential statistics use those properties to test hypotheses, reach conclusions, and make
+predictions (what can you expect).
+
+
+Mean
+ The arithmetic mean of a given data is the sum of all observations divided by the number of
+observations.
+
+ For example, a cricketer's scores in five ODI matches are as follows: 12, 34, 45, 50, 24. To
+find his average score in a match, we calculate the arithmetic mean of data using the mean
+formula:
+
+ Mean = Sum of all observations/Number of observations
+Mean = (12 + 34 + 45 + 50 + 24)/5
+Mean = 165/5 = 33
+Mean is denoted by x̄ (pronounced as x bar).
+
+
+Mode
+ The Mode refers to the most frequently occurring value in your data.
+ You find the frequency of occurrence of each number and the number with the highest
+frequency is your mode. If there are no recurring numbers, then there is no mode in the data.
+ Using the mode, you can find the most commonly occurring point in your data. This is
+helpful when you have to find the central tendency of categorical values, like the flavor of
+the most popular chip sold by a brand. You cannot find the average based on the orders;
+instead, you choose the chip flavor with the highest orders.
+ Usually, you can count the most frequently occurring values and get your mean. But this
+only works when the values are discrete.
+
+
+Median
+ Median refers to the middle value of a data. To find the median, you first sort the data in
+either ascending or descending order or then find the numerical value present in the middle
+of your data.
+ It can be used to figure out the point around which the data is centered. It divides the data
+into two halves and has the same number of data points above and below.
+ The median is especially useful when the data is skewed data. That is, it has high data
+distribution towards one side. In this case, the average wouldn't give you a fair mid-value
+but would lean more towards the higher values. In this case, you can use the middle data
+point as the central point instead.
+
+Standard Deviation and Variance
+ Deviation just means how far from the normal
+ The Standard Deviation is a measure of how spread out numbers are.
+ Its symbol is σ (the greek letter sigma)
+
+ The formula is easy: it is the square root of the Variance.
+
+
+
+groupby()
+A groupby operation involves some combination of splitting the object, applying a function, and
+combining the results. This can be used to group large amounts of data and compute operations
+on these groups.
